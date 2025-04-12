@@ -1,0 +1,6 @@
+loguru==0.7.3
+  - colorama [required: >=0.3.4, installed: 0.4.6]
+  - win32_setctime [required: >=1.0.0, installed: 1.2.0]
+openpyxl==3.1.5
+  - et_xmlfile [required: Any, installed: 2.0.0]
+PyYAML==6.0.2
