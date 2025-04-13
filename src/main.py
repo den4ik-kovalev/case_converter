@@ -14,10 +14,15 @@ ROOT_DIR = Path(os.path.dirname(sys.argv[0]))  # .exe filepath
 
 INPUT_DIR = ROOT_DIR / "Input"
 OUTPUT_DIR = ROOT_DIR / "Output"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-CONFIG_PATH = ROOT_DIR / "config.yml"
-
 LOG_DIR = ROOT_DIR / "Log"
+SETTINGS_DIR = ROOT_DIR / "Settings"
+
+os.makedirs(INPUT_DIR, exist_ok=True)
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(LOG_DIR, exist_ok=True)
+os.makedirs(SETTINGS_DIR, exist_ok=True)
+
+CONFIG_PATH = SETTINGS_DIR / "config.yml"
 LOGGER_PATH = LOG_DIR / "error.log"
 logger.add(LOGGER_PATH, format="{time} | {level} | {message}", level="ERROR")
 
